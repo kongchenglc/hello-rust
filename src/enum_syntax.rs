@@ -80,7 +80,7 @@ fn option_match() {
 fn if_let() {
   let a = Some(3);
   // if let 对比match，只匹配一种可能
-  let b: u8 = if let Some(3) = a {
+  let b: u8 = if let Some(3) = a { // b 是表达式返回值
     println!("three");
     1
   } else {
