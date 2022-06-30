@@ -16,7 +16,6 @@ mod back_of_house {
 }
 
 // struct pub: pub的struct里面的字段默认是私有的，还需要加pub
-
 mod struct_pub {
 
   pub struct a {
@@ -40,3 +39,5 @@ fn call_struct() {
   let aaa = struct_pub::a::create_pub();
   // aaa.bb // (x private
 }
+
+//与struct不同，因为enum本身是个值， pub 的 enum 里面所有可能都是pub的
