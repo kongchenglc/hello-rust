@@ -5,6 +5,7 @@ mod guess_num;
 mod owner_ship;
 mod struct_syntax;
 mod enum_syntax;
+mod package_syntax;
 
 fn main() {
     // guess_num::start();
@@ -13,5 +14,5 @@ fn main() {
     // control_syntax::start();
     // owner_ship::start();
     // struct_syntax::start();
-    enum_syntax::start();
+    // enum_syntax::start();
 }
