@@ -16,24 +16,7 @@ mod back_of_house {
 }
 
 // struct pub: pub的struct里面的字段默认是私有的，还需要加pub
-mod struct_pub {
-
-  pub struct a {
-    pub aa: String,
-    bb: String,
-  }
-
-  impl a {
-    pub fn create_pub() -> a {
-      let aaa: a = a {
-        aa: String::from("xx"),
-        bb: String::from("yy"),
-      };
-      println!("{}", aaa.bb);
-      return aaa;
-    }
-  }
-}
+mod struct_pub; // 目录结构和模块层级一致
 
 fn call_struct() {
   let aaa = struct_pub::a::create_pub();

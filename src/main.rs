@@ -1,11 +1,12 @@
 mod base_syntax;
 mod control_syntax;
+mod enum_syntax;
 mod fn_syntax;
 mod guess_num;
 mod owner_ship;
-mod struct_syntax;
-mod enum_syntax;
 mod package_syntax;
+mod struct_syntax;
+mod use_syntax;
 
 fn main() {
     // guess_num::start();
@@ -15,4 +16,5 @@ fn main() {
     // owner_ship::start();
     // struct_syntax::start();
     // enum_syntax::start();
+    use_syntax::start();
 }
