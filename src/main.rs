@@ -7,6 +7,8 @@ mod owner_ship;
 mod package_syntax;
 mod struct_syntax;
 mod use_syntax;
+mod vector_syntax;
+mod string_syntax;
 
 fn main() {
     // guess_num::start();
@@ -16,5 +18,7 @@ fn main() {
     // owner_ship::start();
     // struct_syntax::start();
     // enum_syntax::start();
-    use_syntax::start();
+    // use_syntax::start();
+    // vector_syntax::start();
+    string_syntax::start();
 }

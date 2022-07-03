@@ -28,9 +28,9 @@ fn string_move() {
   // 防止double free
   let s = String::from("hello");
   let mut s2 = s;
+  // s会被move到s2，s不可用
   // s.push_str(",world");
   s2.push_str(",world");
-  // s会被move到s2，s不可用
 }
 
 fn string_clone() {

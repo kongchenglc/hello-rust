@@ -11,4 +11,5 @@ impl a {
     };
     println!("{}", aaa.bb);
     return aaa;
-  }}
+  }
+}
