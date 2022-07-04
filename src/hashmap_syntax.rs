@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-// 不在 prelude 中，hashmap是同构的，所有kv类型一致
+// 不在 prelude 中，hashmap是同构的，所有kv类型一致。默认的hash函数可以被修改
 
 pub fn start() {
   p1();
