@@ -10,6 +10,7 @@ mod use_syntax;
 mod vector_syntax;
 mod string_syntax;
 mod hashmap_syntax;
+mod panic_syntax;
 
 fn main() {
     // guess_num::start();
@@ -22,5 +23,6 @@ fn main() {
     // use_syntax::start();
     // vector_syntax::start();
     // string_syntax::start();
-    hashmap_syntax::start();
+    // hashmap_syntax::start();
+    panic_syntax::start();
 }
