@@ -11,6 +11,7 @@ mod vector_syntax;
 mod string_syntax;
 mod hashmap_syntax;
 mod panic_syntax;
+mod type_syntax;
 
 fn main() {
     // guess_num::start();
@@ -24,5 +25,6 @@ fn main() {
     // vector_syntax::start();
     // string_syntax::start();
     // hashmap_syntax::start();
-    panic_syntax::start();
+    // panic_syntax::start();
+    type_syntax::start();
 }
