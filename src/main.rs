@@ -12,6 +12,7 @@ mod string_syntax;
 mod hashmap_syntax;
 mod panic_syntax;
 mod type_syntax;
+mod trait_syntax;
 
 fn main() {
     // guess_num::start();
@@ -26,5 +27,6 @@ fn main() {
     // string_syntax::start();
     // hashmap_syntax::start();
     // panic_syntax::start();
-    type_syntax::start();
+    // type_syntax::start();
+    trait_syntax::start();
 }
