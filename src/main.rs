@@ -14,6 +14,7 @@ mod panic_syntax;
 mod type_syntax;
 mod trait_syntax;
 mod life_cycle;
+mod test;
 
 fn main() {
     // guess_num::start();
@@ -30,5 +31,6 @@ fn main() {
     // panic_syntax::start();
     // type_syntax::start();
     // trait_syntax::start();
-    life_cycle::start();
+    // life_cycle::start();
+    test::start();
 }
