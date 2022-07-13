@@ -1,3 +1,5 @@
+// use hello_rust::cal_mod; //  如果没有循环引用，bin里的可以这样use lib里的
+
 // package - cargo
 // crate
 //  - binary(src/main.rs 可以有多个 binary crate,放在src/bin下的每个文件都是单独的crate)
