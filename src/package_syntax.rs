@@ -3,7 +3,7 @@
 // package - cargo
 // crate
 //  - binary(src/main.rs 可以有多个 binary crate,放在src/bin下的每个文件都是单独的crate)
-//  - library(src/lib.rs 只能有0-1个l ibrary crate)
+//  - library(src/lib.rs 只能有0-1个l ibrary crate) // 只有lib crate才能暴露函数给其他crate用，bin只能独立运行
 // module
 // path
 

@@ -1,3 +1,4 @@
+//只测试当前文件：cargo test --test a_test_1
 use hello_rust::cal_mod;
 use hello_rust::fn_syntax;
 
