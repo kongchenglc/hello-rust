@@ -15,6 +15,7 @@ mod type_syntax;
 mod trait_syntax;
 mod life_cycle;
 mod test;
+mod closure;
 
 fn main() {
     // guess_num::start();
@@ -32,5 +33,6 @@ fn main() {
     // type_syntax::start();
     // trait_syntax::start();
     // life_cycle::start();
-    test::start();
+    // test::start();
+    closure::start();
 }
