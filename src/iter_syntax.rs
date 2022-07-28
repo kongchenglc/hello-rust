@@ -1,5 +1,13 @@
 // 迭代器都是惰性的，不执行就不会消耗
 pub fn start() {
+    other_iter();
+    other_next();
+    map_fun();
+    filter_fun();
+    diy_iter()
+}
+
+fn iter_fun() {
     let v1 = vec![1, 2, 3];
 
     let mut v1_iter = v1.iter();
@@ -11,10 +19,6 @@ pub fn start() {
     for val in v1_iter {
         println!("{}", val);
     }
-
-    other_iter();
-    other_next();
-    map_trait();
 }
 
 fn other_iter() {
@@ -32,7 +36,7 @@ fn other_next() {
     println!("{:#?}", total);
 }
 
-fn map_trait() {
+fn map_fun() {
     let v1 = vec![1, 2, 3];
 
     // <_> 表示类型是推断出来的
@@ -41,4 +45,53 @@ fn map_trait() {
     let v2: Vec<_> = v1.iter().map(|x| x + 1).collect();
 
     println!("{:#?}", v2);
+}
+
+fn filter_fun() {
+    let v1 = vec![1, 2, 3];
+    let flag = 1;
+
+    // &flag 闭包捕获所在环境的变量
+    let v2: Vec<_> = v1.iter().map(|x| x > &flag).collect();
+    println!("{:#?}", v2);
+}
+
+fn diy_iter() {
+    #[derive(Debug)]
+    struct Counter {
+        count: u32,
+    }
+
+    impl Counter {
+        fn new() -> Counter {
+            Counter { count: 0 }
+        }
+    }
+
+    //Iterator 是一个trait。可以在自己的struct自定义的实现这个trait
+    impl Iterator for Counter {
+        type Item = u32;
+        fn next(&mut self) -> Option<Self::Item> {
+            if self.count < 5 {
+                self.count += 1;
+                Some(self.count)
+            } else {
+                None
+            }
+        }
+    }
+
+    let a = Counter::new();
+    for item in a {
+        println!("{:?}", item)
+    }
+
+    let sum: u32 = Counter::new()
+        // zip 将两个迭代器拉链合并，zip返回一个()类型的迭代器
+        .zip(Counter::new().skip(1))
+        .map(|(a, b)| a * b)
+        .filter(|x| x % 3 == 0)
+        .sum();
+
+    println!("{:#?}", sum)
 }
