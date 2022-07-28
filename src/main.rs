@@ -16,6 +16,7 @@ mod trait_syntax;
 mod life_cycle;
 mod test;
 mod closure;
+mod iter_syntax;
 
 fn main() {
     // guess_num::start();
@@ -34,5 +35,6 @@ fn main() {
     // trait_syntax::start();
     // life_cycle::start();
     // test::start();
-    closure::start();
+    // closure::start();
+    iter_syntax::start();
 }
