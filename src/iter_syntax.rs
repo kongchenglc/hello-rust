@@ -1,4 +1,5 @@
 // 迭代器都是惰性的，不执行就不会消耗
+// 迭代器是零开销抽象，对比手写for性能无损耗
 pub fn start() {
     other_iter();
     other_next();
