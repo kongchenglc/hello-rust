@@ -1,8 +1,8 @@
-// crate
-//  - binary(src/main.rs 可以有多个 binary crate,放在src/bin下的每个文件都是单独的crate)
-//  - library(src/lib.rs 只能有0-1个 library crate)
+//! crate
+//!  - binary(src/main.rs 可以有多个 binary crate,放在src/bin下的每个文件都是单独的crate)
+//!  - library(src/lib.rs 只能有0-1个 library crate)
 
-// lib.rs 是一个隐式的名为crate根模块。（main.rs也会）
+//! lib.rs 是一个隐式的名为crate根模块。（main.rs也会）
 
 pub mod base_syntax;
 pub mod control_syntax;
@@ -21,6 +21,8 @@ pub mod type_syntax;
 pub mod trait_syntax;
 pub mod life_cycle;
 pub mod test;
+
+pub use test::start; // re-export
 
 mod m1 {
   pub mod sonM {

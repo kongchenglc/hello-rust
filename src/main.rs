@@ -17,6 +17,7 @@ mod life_cycle;
 mod test;
 mod closure;
 mod iter_syntax;
+mod point_syntax;
 
 fn main() {
     // guess_num::start();
@@ -36,5 +37,6 @@ fn main() {
     // life_cycle::start();
     // test::start();
     // closure::start();
-    iter_syntax::start();
+    // iter_syntax::start();
+    point_syntax::start();
 }
