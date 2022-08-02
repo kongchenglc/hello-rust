@@ -18,6 +18,7 @@ mod test;
 mod closure;
 mod iter_syntax;
 mod point_syntax;
+mod concurrent_parallel;
 
 fn main() {
     // guess_num::start();
@@ -38,5 +39,6 @@ fn main() {
     // test::start();
     // closure::start();
     // iter_syntax::start();
-    point_syntax::start();
+    // point_syntax::start();
+    concurrent_parallel::start();
 }
