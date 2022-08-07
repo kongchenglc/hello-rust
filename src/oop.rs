@@ -10,6 +10,7 @@ pub fn start() {
     // 2.方法中不包含任何范型类型参数
 
     state_pattern();
+    state_pattern_2();
 }
 
 fn gui() {
@@ -77,7 +78,7 @@ impl Draw for SelectBox {
     }
 }
 
-// -----------------类似状态机的设计模式
+// -----------------类似状态机的设计模式(x：不推荐)
 fn state_pattern() {
     let mut post = Post::new();
 
@@ -158,5 +159,58 @@ impl State for PendingReview {
     }
     fn approve(self: Box<Self>) -> Box<dyn State> {
         Box::new(Published {})
+    }
+}
+
+//-----------将状态和行为 编码为类型（推荐
+fn state_pattern_2() {
+    let mut post = Post2::new();
+    println!("{:#?}", &post);
+    post.add_text("I ate a salad for lunch today");
+    println!("{:#?}", &post);
+    let post = post.request_review();
+    println!("{:#?}", &post);
+    let post = post.approve();
+    println!("{:#?}", &post);
+}
+#[derive(Debug)]
+pub struct DraftPost {
+    content: String,
+}
+impl DraftPost {
+    pub fn add_text(&mut self, text: &str) {
+        self.content.push_str(text);
+    }
+    pub fn request_review(self) -> PendingReviewPost {
+        PendingReviewPost {
+            content: self.content,
+        }
+    }
+}
+
+#[derive(Debug)]
+pub struct PendingReviewPost {
+    content: String,
+}
+impl PendingReviewPost {
+    pub fn approve(self) -> Post2 {
+        Post2 {
+            content: self.content,
+        }
+    }
+}
+
+#[derive(Debug)]
+pub struct Post2 {
+    content: String,
+}
+impl Post2 {
+    pub fn new() -> DraftPost {
+        DraftPost {
+            content: String::new(),
+        }
+    }
+    pub fn content(&self) -> &str {
+        &self.content
     }
 }
