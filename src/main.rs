@@ -20,6 +20,7 @@ mod iter_syntax;
 mod point_syntax;
 mod concurrent_parallel;
 mod oop;
+mod patterns_matching;
 
 fn main() {
     // guess_num::start();
@@ -42,5 +43,6 @@ fn main() {
     // iter_syntax::start();
     // point_syntax::start();
     // concurrent_parallel::start();
-    oop::start();
+    // oop::start();
+    patterns_matching::start();
 }
