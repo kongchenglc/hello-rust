@@ -21,6 +21,7 @@ mod point_syntax;
 mod concurrent_parallel;
 mod oop;
 mod patterns_matching;
+mod unsafe_syntax;
 
 fn main() {
     // guess_num::start();
@@ -44,5 +45,6 @@ fn main() {
     // point_syntax::start();
     // concurrent_parallel::start();
     // oop::start();
-    patterns_matching::start();
+    // patterns_matching::start();
+    unsafe_syntax::start();
 }
