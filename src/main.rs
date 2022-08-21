@@ -37,7 +37,7 @@ fn main() {
     // hashmap_syntax::start();
     // panic_syntax::start();
     // type_syntax::start();
-    // trait_syntax::start();
+    trait_syntax::start();
     // life_cycle::start();
     // test::start();
     // closure::start();
@@ -46,5 +46,5 @@ fn main() {
     // concurrent_parallel::start();
     // oop::start();
     // patterns_matching::start();
-    unsafe_syntax::start();
+    // unsafe_syntax::start();
 }
