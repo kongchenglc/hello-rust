@@ -22,6 +22,8 @@ mod concurrent_parallel;
 mod oop;
 mod patterns_matching;
 mod unsafe_syntax;
+mod advanced_types;
+mod advanced_fun;
 
 fn main() {
     // guess_num::start();
@@ -37,7 +39,7 @@ fn main() {
     // hashmap_syntax::start();
     // panic_syntax::start();
     // type_syntax::start();
-    trait_syntax::start();
+    // trait_syntax::start();
     // life_cycle::start();
     // test::start();
     // closure::start();
@@ -47,4 +49,6 @@ fn main() {
     // oop::start();
     // patterns_matching::start();
     // unsafe_syntax::start();
+    // advanced_types::start();
+    advanced_fun::start();
 }
